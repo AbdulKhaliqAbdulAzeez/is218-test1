@@ -1,6 +1,19 @@
 # How to run lint/tests
 
-1. pip install -r requirements.txt
-2. pylint --errors-only src
-3. pytest tests -v
-4. pytest --pylint src -v
+## Install dependencies
+
+pip install -r requirements.txt
+
+## Lint (must be clean)
+
+pylint --errors-only src
+
+## Run tests
+
+PYTHONPATH=src pytest tests -v
+PYTHONPATH=src pytest --pylint src -v
+
+## Coverage (must be 100%)
+
+PYTHONPATH=src coverage run -m pytest tests
+coverage report --fail-under=100
