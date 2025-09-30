@@ -15,5 +15,5 @@ PYTHONPATH=src pytest --pylint src -v
 
 ## Coverage (must be 100%)
 
-PYTHONPATH=src coverage run -m pytest tests
-coverage report --fail-under=100
+PYTHONPATH=src coverage run -m pytest tests 2
+coverage report --fail-under=100 
